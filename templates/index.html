@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>EduGenie</title>
+
+    <link
+        rel="stylesheet"
+        href="/static/style.css"
+    >
+
+</head>
+
+<body>
+
+<div class="app">
+
+
+    <!-- ================= SIDEBAR ================= -->
+
+    <aside class="sidebar">
+
+        <div class="brand">
+
+            <div class="brand-icon">
+                ✦
+            </div>
+
+            <div>
+                <div class="brand-name">
+                    EduGenie
+                </div>
+
+                <div class="brand-subtitle">
+                    AI Learning Assistant
+                </div>
+            </div>
+
+        </div>
+
+
+        <!-- NEW CHAT -->
+
+        <button
+            id="new-chat-btn"
+            class="new-chat-btn"
+        >
+            <span>＋</span>
+            New Chat
+        </button>
+
+
+        <!-- TOOLS -->
+
+        <div class="tools-title">
+            TOOLS
+        </div>
+
+
+        <div class="tools">
+
+            <button
+                class="tool-btn"
+                data-task="qa"
+            >
+                <span>💬</span>
+                Ask Question
+            </button>
+
+
+            <button
+                class="tool-btn"
+                data-task="explain"
+            >
+                <span>📚</span>
+                Explain Topic
+            </button>
+
+
+            <button
+                class="tool-btn"
+                data-task="quiz"
+            >
+                <span>🧠</span>
+                Generate Quiz
+            </button>
+
+
+            <button
+                class="tool-btn"
+                data-task="summarize"
+            >
+                <span>📝</span>
+                Summarize
+            </button>
+
+
+            <button
+                class="tool-btn"
+                data-task="learn"
+            >
+                <span>🎯</span>
+                Learning Path
+            </button>
+
+        </div>
+
+
+        <!-- CHAT HISTORY -->
+
+        <div class="chat-history-section">
+
+            <div class="tools-title">
+                CHAT HISTORY
+            </div>
+
+            <div
+                id="chat-history-list"
+                class="chat-history-list"
+            >
+            </div>
+
+        </div>
+
+
+    </aside>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="main">
+
+
+        <!-- TOP BAR -->
+
+        <header class="topbar">
+
+            <div class="topbar-title">
+
+                <span id="mode-label">
+                    Ask Question
+                </span>
+
+            </div>
+
+
+            <div class="topbar-actions">
+
+                <span class="ai-status">
+                    <span class="status-dot"></span>
+                    AI Online
+                </span>
+
+
+                <button
+                    id="theme-btn"
+                    class="icon-btn"
+                >
+                    ☾
+                </button>
+
+            </div>
+
+        </header>
+
+
+        <!-- ================= CONTENT ================= -->
+
+        <section class="content">
+
+
+            <!-- WELCOME -->
+
+            <div
+                id="welcome"
+                class="welcome"
+            >
+
+                <div class="welcome-icon">
+                    ✦
+                </div>
+
+                <h1>
+                    How can I help you learn?
+                </h1>
+
+                <p>
+                    Ask questions, understand concepts,
+                    create quizzes, summarize text,
+                    or build a learning path.
+                </p>
+
+            </div>
+
+
+            <!-- CHAT -->
+
+            <div
+                id="result-area"
+                class="result-area hidden"
+            >
+
+                <div
+                    id="result"
+                    class="chat-history"
+                >
+                </div>
+
+            </div>
+
+
+        </section>
+
+
+        <!-- ================= ERROR ================= -->
+
+        <div
+            id="error"
+            class="error-box hidden"
+        >
+
+            <div id="error-message"></div>
+
+            <button id="error-close">
+                ×
+            </button>
+
+        </div>
+
+
+        <!-- ================= COMPOSER ================= -->
+
+        <div class="composer-area">
+
+
+            <div class="composer">
+
+                <div class="composer-header">
+
+                    <span id="input-title">
+                        Question
+                    </span>
+
+                    <span id="char-count">
+                        0/30000
+                    </span>
+
+                </div>
+
+
+                <textarea
+                    id="input-text"
+                    placeholder="Ask anything..."
+                    rows="3"
+                ></textarea>
+
+
+                <div class="composer-footer">
+
+                    <button
+                        id="sample-btn"
+                        class="sample-btn"
+                    >
+                        Sample
+                    </button>
+
+
+                    <button
+                        id="submit-btn"
+                        class="send-btn"
+                    >
+                        Send
+                        <span>➤</span>
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <div class="composer-hint">
+                Ctrl + Enter to send
+            </div>
+
+        </div>
+
+
+    </main>
+
+</div>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+
+</html>
